@@ -115,6 +115,7 @@ for i in 1...n{
  The type of a and x can be String or Int.
  Return true if the array contains the value, false if not.
  */
+
 func check<T: Equatable>(_ a: [T], _ x: T) -> Bool {
     return a.contains(x)
 }
