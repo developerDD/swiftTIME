@@ -95,3 +95,29 @@ var ABC = "A"..<"Z"
 print(ABC.lowerBound)
 print(ABC.upperBound)
 
+/*Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
+ */
+func triangular(_ n: Int) -> Int{
+var coutn = 0
+
+  if n<1{
+    return 0
+  }
+
+for i in 1...n{
+  coutn+=i
+}
+ return coutn
+}
+
+/*
+ You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+ The type of a and x can be String or Int.
+ Return true if the array contains the value, false if not.
+ */
+func check<T: Equatable>(_ a: [T], _ x: T) -> Bool {
+    return a.contains(x)
+}
+
+
+
