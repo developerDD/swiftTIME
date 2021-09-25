@@ -138,6 +138,25 @@ func booleanToString(_ b: Bool) -> String {
 }
 print(booleanToString(true))
 
+/*
+ Если задано число в месяц от 1 до 12, возвращаем в какой квартал года оно принадлежит целому числу.
+
+ Например: второй месяц (февраль) является частью первого квартала; шестой месяц (июнь) - частью второго квартала; и одиннадцатый месяц (ноябрь) - частью четвертого квартала.
+ */
+func quarter(of month: Int) -> Int {
+    switch month {
+    case 1...3:
+        return 1
+    case 4...6:
+        return 2
+    case 7...9:
+        return 3
+    default:
+        return 4
+    }
+    //  или return (month + 2) / 3
+  }
+
 
 
 
