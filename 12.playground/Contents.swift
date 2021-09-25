@@ -64,61 +64,71 @@ var greeting = "Hello, playground"
 //print(tuple3)
 
 //Диапазоны RANGE
-
-for s in 1...9 {
-    print(s)
-}
-for d in 1..<10{
-    print(d)
-}
-/*
- Задание 6
-
- Создайте диапазон целых чисел от -100 до 100 и инициализируйте его константе range
- Создайте переменную item типа UInt со значением 21.
- Создайте переменную типа Bool и запишите в нее результат проверки наличия значения переменной item в диапазоне range. Каким образом произвести данную проверку?
- */
-let range = -100...100
-var item: UInt = 21
-var inThere = range.contains(Int(item))
+//
+//for s in 1...9 {
+//    print(s)
+//}
+//for d in 1..<10{
+//    print(d)
+//}
+//*
+// Задание 6
+//
+// Создайте диапазон целых чисел от -100 до 100 и инициализируйте его константе range
+// Создайте переменную item типа UInt со значением 21.
+// Создайте переменную типа Bool и запишите в нее результат проверки наличия значения переменной item в диапазоне range. Каким образом произвести данную проверку?
+// */
+//let range = -100...100
+//var item: UInt = 21
+//var inThere = range.contains(Int(item))
 //print(inThere)
-
-/*
- Задание 7
-
- Создайте диапазон, содержащий все заглавные латинские символы.
- Какими будут значения методов min() и max() для этого диапазона?
- Какими будут значения свойств lowerBound и upperBound для этого диапазона?
- */
-var ABC = "A"..<"Z"
+//
+//*
+// Задание 7
+//
+// Создайте диапазон, содержащий все заглавные латинские символы.
+// Какими будут значения методов min() и max() для этого диапазона?
+// Какими будут значения свойств lowerBound и upperBound для этого диапазона?
+// */
+//var ABC = "A"..<"Z"
 // max i min для числових диапазонов
-print(ABC.lowerBound)
-print(ABC.upperBound)
-
-/*Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
- */
-func triangular(_ n: Int) -> Int{
-var coutn = 0
-
-  if n<1{
-    return 0
-  }
-
-for i in 1...n{
-  coutn+=i
-}
- return coutn
-}
-
+//print(ABC.lowerBound)
+//print(ABC.upperBound)
+//
+//*Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
+// */
+//func triangular(_ n: Int) -> Int{
+//var coutn = 0
+//
+//  if n<1{
+//    return 0
+//  }
+//
+//for i in 1...n{
+//  coutn+=i
+//}
+// return coutn
+//}
+//
+//*
+// You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+// The type of a and x can be String or Int.
+// Return true if the array contains the value, false if not.
+// */
+//
+//func check<T: Equatable>(_ a: [T], _ x: T) -> Bool {
+//    return a.contains(x)
+//}
 /*
- You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
- The type of a and x can be String or Int.
- Return true if the array contains the value, false if not.
+ Создайте функцию, которая принимает целое число в качестве аргумента и возвращает "Четное" для чётных чисел или "Нечётное" для нечетных чисел.
  */
-
-func check<T: Equatable>(_ a: [T], _ x: T) -> Bool {
-    return a.contains(x)
+func evenOrOdd(_ number:Int) -> String {
+   return number % 2 == 0 ?"Even":"Odd"
 }
+print(evenOrOdd(12))
+
+
+
 
 
 
