@@ -127,7 +127,16 @@ func evenOrOdd(_ number:Int) -> String {
 }
 print(evenOrOdd(12))
 
+/*
+ Реализация функции, которая преобразует данное логическое значение в его строковое представление.
 
+ Примечание: Будут даны только допустимые входные данные.
+ */
+func booleanToString(_ b: Bool) -> String {
+    return b ?"true":"false"
+    // или String(b)
+}
+print(booleanToString(true))
 
 
 
