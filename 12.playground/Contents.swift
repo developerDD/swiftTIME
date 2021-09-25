@@ -156,6 +156,20 @@ func quarter(of month: Int) -> Int {
     }
     //  или return (month + 2) / 3
   }
+/*
+ Задан массив целых чисел как строк и чисел, возвращаем сумму значений массива как все числа.
+ */
+var arr = [9, 3, "7", "3"] as [Any]
+var sum = 0
+for x in arr{
+    if x is String{
+        sum+=(x as! NSString).integerValue
+        continue
+    }
+    sum+=x as! Int
+}
+//return arr.reduce(0) { $0 + (Int("\($1)") ?? 0) }
+
 
 
 
