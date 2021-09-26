@@ -125,8 +125,6 @@ var greeting = "Hello, playground"
 func evenOrOdd(_ number:Int) -> String {
    return number % 2 == 0 ?"Even":"Odd"
 }
-print(evenOrOdd(12))
-
 /*
  Реализация функции, которая преобразует данное логическое значение в его строковое представление.
 
@@ -136,8 +134,6 @@ func booleanToString(_ b: Bool) -> String {
     return b ?"true":"false"
     // или String(b)
 }
-print(booleanToString(true))
-
 /*
  Если задано число в месяц от 1 до 12, возвращаем в какой квартал года оно принадлежит целому числу.
 
@@ -159,16 +155,65 @@ func quarter(of month: Int) -> Int {
 /*
  Задан массив целых чисел как строк и чисел, возвращаем сумму значений массива как все числа.
  */
-var arr = [9, 3, "7", "3"] as [Any]
-var sum = 0
-for x in arr{
-    if x is String{
-        sum+=(x as! NSString).integerValue
-        continue
-    }
-    sum+=x as! Int
-}
+//var arr = [9, 3, "7", "3"] as [Any]
+//var sum = 0
+//for x in arr{
+//    if x is String{
+//        sum+=(x as! NSString).integerValue
+//        continue
+//    }
+//    sum+=x as! Int
+//}
 //return arr.reduce(0) { $0 + (Int("\($1)") ?? 0) }
+
+//Array chapter
+/*
+ Задание 4
+
+ 1)Создайте массив, состоящий из четырех целочисленных элементов
+
+ 2)Сделайте так, чтобы вместо второго и третьего элементов массива (с индексами 1 и 2) был элемент, содержащий сумму начального и конечного элементов данного массива. После этого в массиве должно остаться 3 элемента.
+
+ 3) Отсортируйте элементы по возрастанию
+ */
+//var arr2 = [1,2,3,4]
+//arr2.remove(at: 1)
+//arr2.remove(at: 1)
+//arr2.insert(arr2[0]+arr2[1], at: 1)
+//arr2.sort()
+/* or
+var arr = [1,2,3,4]
+arr.remove(at: 1)
+arr[1] = arr[0]+arr[2]
+arr // [1, 5, 4]
+arr.sort() // [1, 4, 5]
+*/
+/*
+ Задание 5
+
+ 1) Создайте массив, состоящий из всех целых чисел от 1 до 100
+
+ 2) Создайте пустой массив типа Array<Int>
+
+ 3) Проинициализируйте пустому массиву элементы с 25го по 50ый
+ */
+//var mas = Array(1...100)
+//var masEmptyInt = [Int]()
+//masEmptyInt = Array(mas[24...49])
+
+/*
+ Задание 6
+
+ 1) Создайте массив arr из пяти элементов типа Character
+
+ 2) В массив arr вставьте вторым элементом (не вместо второго, а между первым и вторым) символ “z”
+
+ 3) Создайте переменную i типа UInt8 и проинициализируйте ей количество элементов массива arr.
+ */
+//var arr = ["a","b","c","d","f"]
+//arr.insert("z",at: 1)
+//var i  = (UInt8)(arr.count)
+
 
 
 
