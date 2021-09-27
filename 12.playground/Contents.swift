@@ -213,6 +213,25 @@ arr.sort() // [1, 4, 5]
 //var arr = ["a","b","c","d","f"]
 //arr.insert("z",at: 1)
 //var i  = (UInt8)(arr.count)
+//CodeWar
+/*
+ Если задана строка цифр, вы должны заменить любую цифру ниже 5 на '0' и любую цифру 5 и выше на '1'. Верните полученную строку.
+ */
+func fakeBin(digits: String) -> String {
+  //your code here
+    var strRes = ""
+    for s in digits {
+        if s.isNumber{
+            let n  = Int(String(s))
+            if n!>=5{
+                strRes.append("1")
+            }else {
+                strRes.append("0")
+            }
+        }
+    }
+  return strRes
+} // or return String(digits.map { Int(String($0))! >= 5 ?  "1" : "0" })
 
 
 
