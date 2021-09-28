@@ -217,7 +217,7 @@ arr.sort() // [1, 4, 5]
 /*
  Если задана строка цифр, вы должны заменить любую цифру ниже 5 на '0' и любую цифру 5 и выше на '1'. Верните полученную строку.
  */
-func fakeBin(digits: String) -> String {
+/*func fakeBin(digits: String) -> String {
   //your code here
     var strRes = ""
     for s in digits {
@@ -232,9 +232,23 @@ func fakeBin(digits: String) -> String {
     }
   return strRes
 } // or return String(digits.map { Int(String($0))! >= 5 ?  "1" : "0" })
+ */
 
+/*
+ Задание 6
 
+ 1) Объявите множество taskSet1, состоящий из всех целочисленных элементов от 1 до 10
+ 2) Объявите множество taskSet2, состоящий из всех целочисленных элементов от 5 до 15
+ 3) Создайте множество taskSet3, состоящий из элементов, которые входят и в taskSet1, и в taskSet2
+ 4) Создайте множество taskSet4, состоящий из элементов, которые не пересекаются в taskSet1 и taskSet2
+ 5) Запишите в переменную count типа UInt8 количество элементов в массиве taskSet4. Какое значение примет эта переменная?
+ */
 
+var taskSet1: Set = [Array(1...10)]
+var taskSet2: Set = [Array(5...15)]
+var taskSet3 = taskSet1.union(taskSet2)
+var taskSet4 = taskSet3.symmetricDifference(taskSet2)
+print(taskSet4)
 
 
 
