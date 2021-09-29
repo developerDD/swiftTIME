@@ -244,11 +244,12 @@ arr.sort() // [1, 4, 5]
  5) Запишите в переменную count типа UInt8 количество элементов в массиве taskSet4. Какое значение примет эта переменная?
  */
 
-var taskSet1: Set = [Array(1...10)]
-var taskSet2: Set = [Array(5...15)]
+var taskSet1 = Set (1...10)
+var taskSet2 = Set (5...15)
 var taskSet3 = taskSet1.union(taskSet2)
-var taskSet4 = taskSet3.symmetricDifference(taskSet2)
+var taskSet4 = taskSet1.symmetricDifference(taskSet2)
 print(taskSet4)
-
+var count = UInt8(taskSet4.count)
+print(type(of:count),count)
 
 
