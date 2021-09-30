@@ -242,7 +242,7 @@ arr.sort() // [1, 4, 5]
  3) Создайте множество taskSet3, состоящий из элементов, которые входят и в taskSet1, и в taskSet2
  4) Создайте множество taskSet4, состоящий из элементов, которые не пересекаются в taskSet1 и taskSet2
  5) Запишите в переменную count типа UInt8 количество элементов в массиве taskSet4. Какое значение примет эта переменная?
- */
+
 
 var taskSet1 = Set (1...10)
 var taskSet2 = Set (5...15)
@@ -251,5 +251,22 @@ var taskSet4 = taskSet1.symmetricDifference(taskSet2)
 print(taskSet4)
 var count = UInt8(taskSet4.count)
 print(type(of:count),count)
+ */
+
+/*
+ Ваша цель - вернуть таблицу умножения для числа, которое всегда целое от 1 до 10.
+
+func multi_table(_ number: Int) -> String {
+    var result = ""
+    for i in 1...10{
+        if i==10{
+            result.append("\(i) * \(number) = \(i*number)")
+            break
+        }
+        result.append("\(i) * \(number) = \(i*number)\n")
+    }
+    return result
+}
+ */
 
 
