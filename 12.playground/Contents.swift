@@ -268,5 +268,16 @@ func multi_table(_ number: Int) -> String {
     return result
 }
  */
-
+/*
+func digitize(_ num:Int) -> [Int] {
+    var number = num
+    var resultArrayNumbr: [Int] = Array()
+    repeat {
+        resultArrayNumbr.append(number%10)//заносим последнюю цифру
+        number = number/10// передвигаемся в лево на одну цифру
+    }while number%10>0 || number>0
+            
+    return resultArrayNumbr
+}
+ */
 
