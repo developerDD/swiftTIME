@@ -296,3 +296,12 @@ var ar = [-82, 7, 43, -28, 56, -79, -29, 85, 24, -36, 49, 1, 95, -62, -20, -93, 
 print (ar.count)
 print(take(ar, 63))
  */
+
+/*
+ Эта ката о умножении заданного числа на восемь, если это четное число, и на девять иначе
+ 
+func simpleMultiplication(_ num: Int) -> Int {
+    return num%2==0 ? num*8:num*9
+}
+print(simpleMultiplication(9))
+ */
