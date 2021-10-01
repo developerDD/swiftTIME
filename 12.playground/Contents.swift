@@ -305,3 +305,16 @@ func simpleMultiplication(_ num: Int) -> Int {
 }
 print(simpleMultiplication(9))
  */
+
+/*
+ Завершение функции квадратной суммы таким образом, что она квадратирует каждое число, переданное ей, а затем суммирует результаты вместе.
+ 
+func squareSum(_ vals: [Int]) -> Int {
+   var resultSum = 0
+    for i in vals {
+        resultSum+=i*i
+    }
+    return resultSum
+}
+print(squareSum([1,2,2]))
+ */
