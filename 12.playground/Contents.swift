@@ -352,3 +352,19 @@ let countD = d.count
 var arr = Array(repeating: countD, count: countD)
 print(type(of: arr))// Array<Int>
  */
+
+/*
+ Задание 1
+
+ 1) Создайте переменную типа String со значением “Swift”
+ 2) Создайте константу типа Character с произвольным значением
+ 3) Создайте массив в соответсвии со следующими требованиями:
+ – количество элементов должно соответствовать количеству символов
+ – значения элементов должны быть такими же, как у константы из пункта 2
+ – тип массива должен быть Array<String>
+ 4) Проиницилизируйте значение константы из пункта 2 в переменную из пункта 1
+ */
+var str = "Swift"
+let char: Character = "s"
+var arrS = Array(repeating: String(char), count: str.count)
+str = String(char)
