@@ -328,7 +328,6 @@ print(squareSum([1,2,2]))
  4) Создайте множество, состоящее из всех значений коллекций из пунктов 2 и 3
  Будьте очень внимательны при решении заданий
  
-
 let d: Dictionary<Int,String> = [1:"one",2:"two",3:"three"]
 var keySet = Array(d.keys)
 var valueArry = Array(d.values)
@@ -341,4 +340,15 @@ for s in keySet {
 print(keyStringSet)
  */
 
+/*
+ Задание 5
 
+ 1) Создайте словарь типа Dictionary<Int, Array<String>> и наполните его произвольными значениями
+ 2) Запишите в константу dictElCount количество элементов в словаре
+ 3) Создайте массив, состоящий из dictElCount одинаковых элементов, значений которых dictElCount. Какой тип данных будет у созданного массива?
+ 
+var d: Dictionary<Int, Array<String>> = [1:["q","w"],2:["e","r"]]
+let countD = d.count
+var arr = Array(repeating: countD, count: countD)
+print(type(of: arr))// Array<Int>
+ */
