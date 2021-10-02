@@ -217,7 +217,9 @@ arr.sort() // [1, 4, 5]
 /*
  Если задана строка цифр, вы должны заменить любую цифру ниже 5 на '0' и любую цифру 5 и выше на '1'. Верните полученную строку.
  */
-/*func fakeBin(digits: String) -> String {
+
+/*
+ func fakeBin(digits: String) -> String {
   //your code here
     var strRes = ""
     for s in digits {
@@ -268,6 +270,7 @@ func multi_table(_ number: Int) -> String {
     return result
 }
  */
+
 /*
 func digitize(_ num:Int) -> [Int] {
     var number = num
@@ -318,7 +321,7 @@ func squareSum(_ vals: [Int]) -> Int {
 }
 print(squareSum([1,2,2]))
  */
-
+//Словари
 /*
  Задание 4
 
@@ -352,7 +355,7 @@ let countD = d.count
 var arr = Array(repeating: countD, count: countD)
 print(type(of: arr))// Array<Int>
  */
-
+//Строки
 /*
  Задание 1
 
@@ -380,12 +383,23 @@ str = String(char)
  Используя полученный индекс выведите на консоль последний символ строки из пункта 1
  4) Запишите в новую константу первые четыре символа из строки "БабаЯга"
  Какой тип данных будет у созданной константы
- */
-
+ 
 let str = "JonhWick"
 var ferstIndex = str.startIndex // J
 var lastIndex = str.index(before: str.endIndex)//k
 let bab = "БабаЯга".dropLast(3) //Баба
 let yaga = "БабаЯга".dropFirst(4)//Яга
 print(type(of: bab)) // Substring
+ */
+//Шахматные фигури в Set
+/*
+ Задание 3
 
+ Самостоятельно в сети Интернет найдите кодовые точки для Unicode-символов “шахматные фигуры”, после чего создайте два множества типа Set<Character>, состоящие из данных символов.
+ Первое множество должно содержать все фигуры белого цвета, а второе – черного.
+ 
+var arrWhiteChess: Set = ["\u{2654}","\u{2655}","\u{2656}","\u{2657}","\u{2658}","\u{2659}"]
+var arrBlackChess: Set = ["\u{265A}","\u{265B}","\u{265C}","\u{265D}","\u{265E}","\u{265F}"]
+print(arrWhiteChess)
+print(arrBlackChess)
+ */
