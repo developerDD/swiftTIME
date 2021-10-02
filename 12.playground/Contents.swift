@@ -318,3 +318,27 @@ func squareSum(_ vals: [Int]) -> Int {
 }
 print(squareSum([1,2,2]))
  */
+
+/*
+ Задание 4
+
+ 1) Создайте словарь типа Dictionary<Int, String> и наполните его тремя элементами
+ 2) Запишите в множество все ключи словаря
+ 3) Запишите в массив все значения словаря
+ 4) Создайте множество, состоящее из всех значений коллекций из пунктов 2 и 3
+ Будьте очень внимательны при решении заданий
+ 
+
+let d: Dictionary<Int,String> = [1:"one",2:"two",3:"three"]
+var keySet = Array(d.keys)
+var valueArry = Array(d.values)
+var keyStringSet: String = ""
+var n = 0
+for s in keySet {
+    keyStringSet += "\(String(s)) " + valueArry[n] + " "
+    n += 1
+}
+print(keyStringSet)
+ */
+
+
