@@ -391,6 +391,23 @@ let bab = "БабаЯга".dropLast(3) //Баба
 let yaga = "БабаЯга".dropFirst(4)//Яга
 print(type(of: bab)) // Substring
  */
+
+/*
+ Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+
+ Example:
+
+ Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+ Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren'
+ */
+var str = "dima. do fam"
+var arrStr = str.components(separatedBy: " ") // разделяем строку на слова
+str=""
+for words in arrStr {
+    str.append(words.prefix(1).uppercased()+words.dropFirst()+" ")// в каждом слове первую букву делаем заглавной
+}
+print(str.trimmingCharacters(in: .whitespaces))// убираем пробел последний
+
 //Шахматные фигури в Set
 /*
  Задание 3
@@ -403,3 +420,5 @@ var arrBlackChess: Set = ["\u{265A}","\u{265B}","\u{265C}","\u{265D}","\u{265E}"
 print(arrWhiteChess)
 print(arrBlackChess)
  */
+
+
