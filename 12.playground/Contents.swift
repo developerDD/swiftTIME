@@ -355,7 +355,7 @@ let countD = d.count
 var arr = Array(repeating: countD, count: countD)
 print(type(of: arr))// Array<Int>
  */
-//Строки
+//Строки все задачи
 /*
  Задание 1
 
@@ -399,7 +399,7 @@ print(type(of: bab)) // Substring
 
  Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
  Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren'
- */
+
 var str = "dima. do fam"
 var arrStr = str.components(separatedBy: " ") // разделяем строку на слова
 str=""
@@ -407,6 +407,20 @@ for words in arrStr {
     str.append(words.prefix(1).uppercased()+words.dropFirst()+" ")// в каждом слове первую букву делаем заглавной
 }
 print(str.trimmingCharacters(in: .whitespaces))// убираем пробел последний
+ 
+ Расширение
+ extension String {
+    func toJadenCase() -> String {
+       print (self)
+        let arrStr = self.components(separatedBy: " ")
+ var str = ""
+ for words in arrStr {
+     str.append(words.prefix(1).uppercased()+words.dropFirst()+" ")
+ }
+        return String(str.dropLast(1))
+     }
+ } или функция capitalized)))
+ */
 
 //Шахматные фигури в Set
 /*
@@ -421,4 +435,4 @@ print(arrWhiteChess)
 print(arrBlackChess)
  */
 
-
+print("dima vasy".toJadenCase())
