@@ -427,7 +427,24 @@ print(str.trimmingCharacters(in: .whitespaces))// убираем пробел п
 
  Пример: (Input1, Input2 -->Output)
  
- 
+ func sum_str(_ a:String, _ b:String) -> String {
+ //     happy coding !
+     var numA = 0
+     var numB = 0
+     if let number = Int(a){
+         numA = number
+     }
+     if let number = Int(b){
+         numB = number
+     }
+     return "\(numA + numB)"
+ } // String((Int(a) ?? 0) + (Int(b) ?? 0))
+ */
+
+/*
+ Write a function called repeatStr which repeats the given string string exactly n times.
+ var s = String(repeating: "DD", count: 5)
+
  */
 
 //Шахматные фигури в Set
@@ -443,18 +460,7 @@ print(arrWhiteChess)
 print(arrBlackChess)
  */
 
-func sum_str(_ a:String, _ b:String) -> String {
-//     happy coding !
-    var numA = 0
-    var numB = 0
-    if let number = Int(a){
-        numA = number
-    }
-    if let number = Int(b){
-        numB = number
-    }
-    return "\(numA + numB)"
-} // String((Int(a) ?? 0) + (Int(b) ?? 0))
+
 
 
 
