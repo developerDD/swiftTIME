@@ -321,6 +321,28 @@ func squareSum(_ vals: [Int]) -> Int {
 }
 print(squareSum([1,2,2]))
  */
+
+/*
+ Написать функцию bmi, которая вычисляет индекс массы тела (bmi = вес / высота 2)
+ func bmi(_ weight: Int, _ height: Double) -> String {
+     let BMI = Double(weight)/(height*height)
+    print(BMI)
+     if  BMI <= 18.5 {
+         return "Underweight"
+     } else if BMI <= 25.0{
+         return "Normal"
+     } else if BMI <= 30.0{
+         return "Overweight"
+     }else{
+         return "Obese"
+     }
+ }
+ switch Double(weight)/pow(height, 2) {
+       case ...18.5: return "Underweight"
+       case ...25.0: return "Normal"
+       case ...30.0: return "Overweight"
+       default: return "Obese"
+ */
 //Словари
 /*
  Задание 4
@@ -461,6 +483,8 @@ print(arrBlackChess)
  */
 
 
+
+print(bmi(73, 1.73))
 
 
 
