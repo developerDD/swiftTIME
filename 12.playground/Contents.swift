@@ -343,6 +343,26 @@ print(squareSum([1,2,2]))
        case ...30.0: return "Overweight"
        default: return "Obese"
  */
+
+/*
+ Ваша задача - найти первый элемент массива, который не является последовательным.
+
+ Под последовательностью мы понимаем не более чем на 1 больше предыдущего элемента массива.
+
+ E.g. Если у нас есть массив [1,2,3,4,6,7,8], то 1 тогда 2 тогда 3 тогда 4 все последовательно, но 6 не является, так что это первое недолговечное число.
+ 
+ func firstNonConsecutive (_ arr: [Int]) -> Int? {
+     for n in 0 ..< arr.count-1{
+         if arr[n]+1 == arr[n+1] {
+             continue
+         }else{
+             return arr[n+1]
+         }
+     }
+     return nil
+ }
+ */
+
 //Словари
 /*
  Задание 4
@@ -481,10 +501,5 @@ var arrBlackChess: Set = ["\u{265A}","\u{265B}","\u{265C}","\u{265D}","\u{265E}"
 print(arrWhiteChess)
 print(arrBlackChess)
  */
-
-
-
-print(bmi(73, 1.73))
-
 
 
