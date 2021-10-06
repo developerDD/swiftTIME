@@ -422,6 +422,14 @@ print(str.trimmingCharacters(in: .whitespaces))// убираем пробел п
  } или функция capitalized)))
  */
 
+/*
+ Создайте функцию, которая принимает 2 неотрицательных целых числа в виде строки в качестве входа и выводит сумму (также в виде строки):
+
+ Пример: (Input1, Input2 -->Output)
+ 
+ 
+ */
+
 //Шахматные фигури в Set
 /*
  Задание 3
@@ -435,4 +443,18 @@ print(arrWhiteChess)
 print(arrBlackChess)
  */
 
-print("dima vasy".toJadenCase())
+func sum_str(_ a:String, _ b:String) -> String {
+//     happy coding !
+    var numA = 0
+    var numB = 0
+    if let number = Int(a){
+        numA = number
+    }
+    if let number = Int(b){
+        numB = number
+    }
+    return "\(numA + numB)"
+} // String((Int(a) ?? 0) + (Int(b) ?? 0))
+
+
+
