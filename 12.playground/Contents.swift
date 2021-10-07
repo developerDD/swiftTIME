@@ -363,6 +363,12 @@ print(squareSum([1,2,2]))
  }
  */
 
+/*
+ Создать массив в обратном порядке
+ var n = 5
+ var d = Array(1...n).reversed()
+ */
+
 //Словари
 /*
  Задание 4
@@ -501,5 +507,6 @@ var arrBlackChess: Set = ["\u{265A}","\u{265B}","\u{265C}","\u{265D}","\u{265E}"
 print(arrWhiteChess)
 print(arrBlackChess)
  */
+
 
 
