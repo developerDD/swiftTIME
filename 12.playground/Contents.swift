@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-var greeting = "Hello, playground"
+
 /*
  Кортежи
  */
@@ -25,9 +25,7 @@ var greeting = "Hello, playground"
  Объявите кортеж, способный хранить три значения типа Int16.
  Одним выражением объявите две константы типа Int и проинициализуйте им произвольные значения.
  В первые два значения кортежа запишите значения из данных переменных, а в третий их сумму.
- 
-
-        var tuple1: (Int16,Int16,Int16)
+         var tuple1: (Int16,Int16,Int16)
         let (a,b)=(1,2)
         tuple1=(Int16(a),Int16(b),Int16(a+b))
  */
@@ -74,6 +72,30 @@ for s in 1...9 {
 for d in 1..<10{
     print(d)
 }*/
+/*
+ Задание 6
+
+ Создайте диапазон целых чисел от -100 до 100 и инициализируйте его константе range
+ Создайте переменную item типа UInt со значением 21.
+ Создайте переменную типа Bool и запишите в нее результат проверки наличия значения переменной item в диапазоне range. Каким образом произвести данную проверку?
+ 
+let range = -100...100
+var item: UInt = 21
+var inThere = range.contains(Int(item))
+print(inThere)
+ */
+/*
+ Задание 7
+
+ Создайте диапазон, содержащий все заглавные латинские символы.
+ Какими будут значения методов min() и max() для этого диапазона?
+ Какими будут значения свойств lowerBound и upperBound для этого диапазона?
+ 
+var ABC = "A"..<"Z"
+ //max i min для числових диапазонов
+print(ABC.lowerBound)
+print(ABC.upperBound)
+ */
 
 //Операторы управлеия
 /*
@@ -200,7 +222,7 @@ days
  Основано на предыдущем задании
  У вас появилась дополнительная переменная chars, которая может принять два значения "up" и "down"
  Доработайте конструкцию switch-case таким образом, чтобы в зависимости от значения chars массив заполнялся большими или маленькими символами
- */
+ 
 var lang = "en"
 var chars = "up"
 var days: [String] = []
@@ -218,30 +240,35 @@ default:
     break
 }
 days
-/*
- Задание 6
-
- Создайте диапазон целых чисел от -100 до 100 и инициализируйте его константе range
- Создайте переменную item типа UInt со значением 21.
- Создайте переменную типа Bool и запишите в нее результат проверки наличия значения переменной item в диапазоне range. Каким образом произвести данную проверку?
- 
-let range = -100...100
-var item: UInt = 21
-var inThere = range.contains(Int(item))
-print(inThere)
  */
 /*
  Задание 7
 
- Создайте диапазон, содержащий все заглавные латинские символы.
- Какими будут значения методов min() и max() для этого диапазона?
- Какими будут значения свойств lowerBound и upperBound для этого диапазона?
- 
-var ABC = "A"..<"Z"
- //max i min для числових диапазонов
-print(ABC.lowerBound)
-print(ABC.upperBound)
+ 1) Определите псевдоним Operation типу кортежа, содержащему три элемента со следующими именами: operandOne, operandTwo, operation.
+ Первые два – это числа с плавающей точкой. Они будут содержать операнды для выполнения операции.
+ Третий элемент – строковое значение типа Character. Оно будет содержать указатель на проводимую операцию. Всего может быть четыре вида операций: +, -, *, /.
+ 2) Создайте константу типа Operation и инициализируйте ей произвольное значение, к примеру (3.1, 33, "+")
+ 3) Используя конструкцию switch-case вычислите значение операции, указанной в элементе для операндов operandOne и operandTwo. Оператор switch должен корректно отрабатывать любую из четырех операций.
+ 4) Проверьте правильность работы конструкции по для следующих операций:
+
+ (3.1, 33, "+")
+ (24.9, 22.32, "*")
+ (11.3, 5, "/")
+ (5, 2.5, "-")
  */
+typealias Operation = (operandOne: Double,operandTwo: Double,operation: Character)
+var primer: Operation = (5, 2.5, "-")
+var res: Double = 0
+switch primer.operation {
+case "+": print("\(primer.operandOne) + \(primer.operandTwo) = \(primer.operandOne + primer.operandTwo)")
+case "*": print("\(primer.operandOne) * \(primer.operandTwo) = \(primer.operandOne * primer.operandTwo)")
+case "/": print("\(primer.operandOne) / \(primer.operandTwo) = \(primer.operandOne / primer.operandTwo)")
+case "-": print("\(primer.operandOne) - \(primer.operandTwo) = \(primer.operandOne - primer.operandTwo)")
+default:
+    break
+}
+
+
 /*Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
 func triangular(_ n: Int) -> Int{
@@ -548,144 +575,6 @@ func findDifference(_ a: [Int], _ b: [Int]) -> Int {
 }
  */
 
-//Словари
-/*
- Задание 4
-
- 1) Создайте словарь типа Dictionary<Int, String> и наполните его тремя элементами
- 2) Запишите в множество все ключи словаря
- 3) Запишите в массив все значения словаря
- 4) Создайте множество, состоящее из всех значений коллекций из пунктов 2 и 3
- Будьте очень внимательны при решении заданий
- 
-let d: Dictionary<Int,String> = [1:"one",2:"two",3:"three"]
-var keySet = Array(d.keys)
-var valueArry = Array(d.values)
-var keyStringSet: String = ""
-var n = 0
-for s in keySet {
-    keyStringSet += "\(String(s)) " + valueArry[n] + " "
-    n += 1
-}
-print(keyStringSet)
- */
-
-/*
- Задание 5
-
- 1) Создайте словарь типа Dictionary<Int, Array<String>> и наполните его произвольными значениями
- 2) Запишите в константу dictElCount количество элементов в словаре
- 3) Создайте массив, состоящий из dictElCount одинаковых элементов, значений которых dictElCount. Какой тип данных будет у созданного массива?
- 
-var d: Dictionary<Int, Array<String>> = [1:["q","w"],2:["e","r"]]
-let countD = d.count
-var arr = Array(repeating: countD, count: countD)
-print(type(of: arr))// Array<Int>
- */
-//Строки все задачи
-/*
- Задание 1
-
- 1) Создайте переменную типа String со значением “Swift”
- 2) Создайте константу типа Character с произвольным значением
- 3) Создайте массив в соответсвии со следующими требованиями:
- – количество элементов должно соответствовать количеству символов
- – значения элементов должны быть такими же, как у константы из пункта 2
- – тип массива должен быть Array<String>
- 4) Проиницилизируйте значение константы из пункта 2 в переменную из пункта 1
- 
-var str = "Swift"
-let char: Character = "s"
-var arrS = Array(repeating: String(char), count: str.count)
-str = String(char)
- */
-
-/*
- Задание 2
-
- 1) Создайте константу со строковым значением "JonhWick"
- 2) Получите индекс первого символа строки.
- Используя полученный индекс выведите на консоль первый символ строки из пункта 1
- 3) Одним выражением получите индекс последнего символа строки из пункта 1
- Используя полученный индекс выведите на консоль последний символ строки из пункта 1
- 4) Запишите в новую константу первые четыре символа из строки "БабаЯга"
- Какой тип данных будет у созданной константы
- 
-let str = "JonhWick"
-var ferstIndex = str.startIndex // J
-var lastIndex = str.index(before: str.endIndex)//k
-let bab = "БабаЯга".dropLast(3) //Баба
-let yaga = "БабаЯга".dropFirst(4)//Яга
-print(type(of: bab)) // Substring
- */
-
-/*
- Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
-
- Example:
-
- Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
- Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren'
-
-var str = "dima. do fam"
-var arrStr = str.components(separatedBy: " ") // разделяем строку на слова
-str=""
-for words in arrStr {
-    str.append(words.prefix(1).uppercased()+words.dropFirst()+" ")// в каждом слове первую букву делаем заглавной
-}
-print(str.trimmingCharacters(in: .whitespaces))// убираем пробел последний
- 
- Расширение
- extension String {
-    func toJadenCase() -> String {
-       print (self)
-        let arrStr = self.components(separatedBy: " ")
- var str = ""
- for words in arrStr {
-     str.append(words.prefix(1).uppercased()+words.dropFirst()+" ")
- }
-        return String(str.dropLast(1))
-     }
- } или функция capitalized)))
- */
-
-/*
- Создайте функцию, которая принимает 2 неотрицательных целых числа в виде строки в качестве входа и выводит сумму (также в виде строки):
-
- Пример: (Input1, Input2 -->Output)
- 
- func sum_str(_ a:String, _ b:String) -> String {
- //     happy coding !
-     var numA = 0
-     var numB = 0
-     if let number = Int(a){
-         numA = number
-     }
-     if let number = Int(b){
-         numB = number
-     }
-     return "\(numA + numB)"
- } // String((Int(a) ?? 0) + (Int(b) ?? 0))
- */
-
-/*
- Write a function called repeatStr which repeats the given string string exactly n times.
- var s = String(repeating: "DD", count: 5)
-
- */
-
-//Шахматные фигури в Set
-/*
- Задание 3
-
- Самостоятельно в сети Интернет найдите кодовые точки для Unicode-символов “шахматные фигуры”, после чего создайте два множества типа Set<Character>, состоящие из данных символов.
- Первое множество должно содержать все фигуры белого цвета, а второе – черного.
- 
-var arrWhiteChess: Set = ["\u{2654}","\u{2655}","\u{2656}","\u{2657}","\u{2658}","\u{2659}"]
-var arrBlackChess: Set = ["\u{265A}","\u{265B}","\u{265C}","\u{265D}","\u{265E}","\u{265F}"]
-print(arrWhiteChess)
-print(arrBlackChess)
- */
 
 
 
