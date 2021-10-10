@@ -97,7 +97,7 @@ print(ABC.lowerBound)
 print(ABC.upperBound)
  */
 
-//Операторы управлеия
+//Операторы управлеия Глава 10
 /*
  Задание 1
  Напишите код, который будет выводить на консоль персонализированное приветствие пользователю в зависимости от его имени.
@@ -255,7 +255,7 @@ days
  (24.9, 22.32, "*")
  (11.3, 5, "/")
  (5, 2.5, "-")
- */
+ 
 typealias Operation = (operandOne: Double,operandTwo: Double,operation: Character)
 var primer: Operation = (5, 2.5, "-")
 var res: Double = 0
@@ -264,6 +264,68 @@ case "+": print("\(primer.operandOne) + \(primer.operandTwo) = \(primer.operandO
 case "*": print("\(primer.operandOne) * \(primer.operandTwo) = \(primer.operandOne * primer.operandTwo)")
 case "/": print("\(primer.operandOne) / \(primer.operandTwo) = \(primer.operandOne / primer.operandTwo)")
 case "-": print("\(primer.operandOne) - \(primer.operandTwo) = \(primer.operandOne - primer.operandTwo)")
+default:
+    break
+}
+ */
+
+// Глава 11 Опциональные типы
+
+/*
+ Задание 5
+
+ 1) Создайте псевдоним типа String с именем Text
+ 2) Объявите три константы типа Text. Значения дух констант должны состоять только из цифр, а третьей – из букв и цифр
+ 3) С помощью оператора условия определите те константы, которые состоят только из цифр и выведите из на консоль
+
+ Для преобразования строки в число (для проверки того, из чего она состоит) можно использовать функцию Int(_:)
+ */
+typealias Text = String
+let t1: Text = "12"
+let t2: Text = "22"
+let t3: Text = "d21"
+
+if let number = Int(t1) {
+    print(number)
+}
+if let number = Int(t2) {
+    print(number)
+}
+if let number = Int(t3) {
+    print(number)
+}else{
+    print("Not number!")
+}
+/*
+ Задание 6
+
+ В задании используются результаты предыдущего задания
+ 1) Создайте псевдоним типа (numberOne: Text?, numberTwo: Text?) с именем TupleType.
+ 2) Создайте три переменные типа TupleType, содержащие следующие значения: ("190", "67"), ("100", nil), ("-65", "70").
+ 3) С помощью конструкции switch-case определите, какие из кортежей не содержат nil в своем составе и выведите значения их элементов на консоль
+ */
+
+typealias TupleType = (numerOne: Text?, numberTwo: Text?)
+
+var strTuple: TupleType = ("190", "67")
+var strTuple1: TupleType = ("100", nil)
+var strTuple2: TupleType = ("-65", "70")
+
+switch strTuple {
+case (let a, let b) where a != nil && b != nil:
+    print("\(a!) \(b!)")
+default:
+    break
+}
+switch strTuple1 {
+case (let a, let b) where a != nil && b != nil:
+    print("\(a!) \(b!)")
+default:
+    break
+}
+switch strTuple2 {
+case (let a, let b) where a != nil && b != nil:
+    print("\(a!) \(b!)")
 default:
     break
 }
@@ -353,13 +415,13 @@ func quarter(of month: Int) -> Int {
  2)Сделайте так, чтобы вместо второго и третьего элементов массива (с индексами 1 и 2) был элемент, содержащий сумму начального и конечного элементов данного массива. После этого в массиве должно остаться 3 элемента.
 
  3) Отсортируйте элементы по возрастанию
- */
-//var arr2 = [1,2,3,4]
-//arr2.remove(at: 1)
-//arr2.remove(at: 1)
-//arr2.insert(arr2[0]+arr2[1], at: 1)
-//arr2.sort()
-/* or
+ 
+var arr2 = [1,2,3,4]
+arr2.remove(at: 1)
+arr2.remove(at: 1)
+arr2.insert(arr2[0]+arr2[1], at: 1)
+arr2.sort()
+ or
 var arr = [1,2,3,4]
 arr.remove(at: 1)
 arr[1] = arr[0]+arr[2]
@@ -374,11 +436,11 @@ arr.sort() // [1, 4, 5]
  2) Создайте пустой массив типа Array<Int>
 
  3) Проинициализируйте пустому массиву элементы с 25го по 50ый
+ 
+var mas = Array(1...100)
+var masEmptyInt = [Int]()
+masEmptyInt = Array(mas[24...49])
  */
-//var mas = Array(1...100)
-//var masEmptyInt = [Int]()
-//masEmptyInt = Array(mas[24...49])
-
 /*
  Задание 6
 
@@ -387,10 +449,12 @@ arr.sort() // [1, 4, 5]
  2) В массив arr вставьте вторым элементом (не вместо второго, а между первым и вторым) символ “z”
 
  3) Создайте переменную i типа UInt8 и проинициализируйте ей количество элементов массива arr.
+ 
+var arr = ["a","b","c","d","f"]
+arr.insert("z",at: 1)
+var i  = (UInt8)(arr.count)
  */
-//var arr = ["a","b","c","d","f"]
-//arr.insert("z",at: 1)
-//var i  = (UInt8)(arr.count)
+
 //CodeWar
 /*
  Если задана строка цифр, вы должны заменить любую цифру ниже 5 на '0' и любую цифру 5 и выше на '1'. Верните полученную строку.
@@ -575,6 +639,17 @@ func findDifference(_ a: [Int], _ b: [Int]) -> Int {
 }
  */
 
+var easy: String?
+var medium: String!
+var hard: String
 
+easy = "1"
+medium = "koko"
+hard = "paly"
+easy = medium
+hard = medium
+easy = hard
+var gameT = (easy, Optional(hard))
+var ha: String = gameT.0!
 
 
