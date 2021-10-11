@@ -279,7 +279,7 @@ default:
  3) С помощью оператора условия определите те константы, которые состоят только из цифр и выведите из на консоль
 
  Для преобразования строки в число (для проверки того, из чего она состоит) можно использовать функцию Int(_:)
- */
+ 
 typealias Text = String
 let t1: Text = "12"
 let t2: Text = "22"
@@ -296,6 +296,7 @@ if let number = Int(t3) {
 }else{
     print("Not number!")
 }
+ */
 /*
  Задание 6
 
@@ -303,7 +304,7 @@ if let number = Int(t3) {
  1) Создайте псевдоним типа (numberOne: Text?, numberTwo: Text?) с именем TupleType.
  2) Создайте три переменные типа TupleType, содержащие следующие значения: ("190", "67"), ("100", nil), ("-65", "70").
  3) С помощью конструкции switch-case определите, какие из кортежей не содержат nil в своем составе и выведите значения их элементов на консоль
- */
+ 
 
 typealias TupleType = (numerOne: Text?, numberTwo: Text?)
 
@@ -329,7 +330,37 @@ case (let a, let b) where a != nil && b != nil:
 default:
     break
 }
+ */
+/*
+ Задание 7
 
+ Представьте, что вы являетесь преподавателем курсов по шахматам. Ваши занятия посещают ученики и в конце каждого занятия получаю оценку.
+ 1) Создайте словарь, который будет содержать информацию о ваших студентах и об их успехах.
+
+ Тип данных словаря – [String: [String: UInt]]
+ Индекс – это фамилия ученика.
+ Значение – еще один словарь, содержащий информацию о дате занятия и полученной оценке.
+ В вашем электронном журнале должна находиться информация о трех учениках, по две оценки для каждого. Фамилии и даты придумайте самостоятельно.
+ 2) Подсчитайте средний балл каждого студента, средний балл группы, и выведите информацию на консоль.
+ */
+
+var curs: [String:[String:UInt]] = ["Пупкин":["21.10.21":5,"23.10.21":4],"Пуушкин":["25.10.21":5,"26.10.21":3],"Кукушкин":["10.10.21":5,"27.10.21":5]]
+assert(!curs.isEmpty, "Словарь пустой!")
+var sumStudent: Float = 0
+var midel: Float = 0
+var countStudet: Float = Float(curs.count)
+for key in curs.keys {
+    print(key)
+    print("Оценки:")
+    print(curs[key]!.values)
+    for number in Array(curs[key]!.values) {
+        sumStudent+=Float(number)
+    }
+    print("Средняя оценка - \(sumStudent/Float(curs[key]!.count))")
+    midel+=sumStudent
+    sumStudent=0
+}
+print("Средняя оценка по курсу -\(countStudet)")
 
 /*Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
