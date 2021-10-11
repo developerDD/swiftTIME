@@ -360,7 +360,7 @@ for key in curs.keys {
     midel+=sumStudent
     sumStudent=0
 }
-print("Средняя оценка по курсу -\(countStudet)")
+print("Средняя оценка по курсу - \(midel/(countStudet*2)) ")
 
 /*Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
