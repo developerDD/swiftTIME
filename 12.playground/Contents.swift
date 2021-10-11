@@ -383,6 +383,13 @@ var nameStudent = "Кукушкин"
 if let _ = curs[nameStudent] {
     curs[nameStudent]!.updateValue(6, forKey: "11.11.11")
 }
+/*
+ Из книги
+ if var lessons = students["Усов"] {
+     lessons["2019-02-05"] = 5
+     students["Усов"] = lessons
+ }
+ */
 for key in curs.keys {
     print(key)
     print("Оценки:")
