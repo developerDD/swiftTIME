@@ -342,8 +342,7 @@ default:
  Значение – еще один словарь, содержащий информацию о дате занятия и полученной оценке.
  В вашем электронном журнале должна находиться информация о трех учениках, по две оценки для каждого. Фамилии и даты придумайте самостоятельно.
  2) Подсчитайте средний балл каждого студента, средний балл группы, и выведите информацию на консоль.
- */
-
+ 
 var curs: [String:[String:UInt]] = ["Пупкин":["21.10.21":5,"23.10.21":3,"1.2.12":5],"Пуушкин":["25.10.21":4,"26.10.21":3],"Кукушкин":["10.10.21":5,"27.10.21":5]]
 assert(!curs.isEmpty, "Словарь пустой!")
 var sumStudentGrade: Float = 0
@@ -365,8 +364,39 @@ for key in curs.keys {
     sumStudentGrade=0
 }
 print("Средняя оценка по курсу - \(sumGrade/countGrade)")
+ */
+/*
+ Задание 8
 
-
+ Основано на предыдущем задании
+ Перед вам стоит задача внести в уже существующий словарь оценку за еще одно занятие для студента. Покажите, каким образом это можно сделать.
+ */
+var curs: [String:[String:UInt]] = ["Пупкин":["21.10.21":5,"23.10.21":3,"1.2.12":5],"Пуушкин":["25.10.21":4,"26.10.21":3],"Кукушкин":["10.10.21":5,"27.10.21":5]]
+assert(!curs.isEmpty, "Словарь пустой!")
+var sumStudentGrade: Float = 0
+//сумма всех оценок для поиска средней оценки по курсу
+var sumGrade: Float = 0
+//количество оценок у студета
+var countGrade: Float = 0
+// добавить запись про оценку студенту
+var nameStudent = "Кукушкин"
+if let _ = curs[nameStudent] {
+    curs[nameStudent]!.updateValue(6, forKey: "11.11.11")
+}
+for key in curs.keys {
+    print(key)
+    print("Оценки:")
+    print(curs[key]!.values)
+    for number in Array(curs[key]!.values) {
+        sumStudentGrade+=Float(number)
+        countGrade+=1
+        
+    }
+    print("Средняя оценка - \(sumStudentGrade/Float(curs[key]!.count))")
+    sumGrade+=sumStudentGrade
+    sumStudentGrade=0
+}
+print("Средняя оценка по курсу - \(sumGrade/countGrade)")
 
 /*Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
