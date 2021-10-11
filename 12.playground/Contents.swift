@@ -344,23 +344,29 @@ default:
  2) Подсчитайте средний балл каждого студента, средний балл группы, и выведите информацию на консоль.
  */
 
-var curs: [String:[String:UInt]] = ["Пупкин":["21.10.21":5,"23.10.21":4],"Пуушкин":["25.10.21":5,"26.10.21":3],"Кукушкин":["10.10.21":5,"27.10.21":5]]
+var curs: [String:[String:UInt]] = ["Пупкин":["21.10.21":5,"23.10.21":3,"1.2.12":5],"Пуушкин":["25.10.21":4,"26.10.21":3],"Кукушкин":["10.10.21":5,"27.10.21":5]]
 assert(!curs.isEmpty, "Словарь пустой!")
-var sumStudent: Float = 0
-var midel: Float = 0
-var countStudet: Float = Float(curs.count)
+var sumStudentGrade: Float = 0
+//сумма всех оценок для поиска средней оценки по курсу
+var sumGrade: Float = 0
+//количество оценок у студета
+var countGrade: Float = 0
 for key in curs.keys {
     print(key)
     print("Оценки:")
     print(curs[key]!.values)
     for number in Array(curs[key]!.values) {
-        sumStudent+=Float(number)
+        sumStudentGrade+=Float(number)
+        countGrade+=1
+        
     }
-    print("Средняя оценка - \(sumStudent/Float(curs[key]!.count))")
-    midel+=sumStudent
-    sumStudent=0
+    print("Средняя оценка - \(sumStudentGrade/Float(curs[key]!.count))")
+    sumGrade+=sumStudentGrade
+    sumStudentGrade=0
 }
-print("Средняя оценка по курсу - \(midel/(countStudet*2)) ")
+print("Средняя оценка по курсу - \(sumGrade/countGrade)")
+
+
 
 /*Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
