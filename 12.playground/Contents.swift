@@ -419,21 +419,25 @@ var arrBlackChess: Set = ["\u{265A}","\u{265B}","\u{265C}","\u{265D}","\u{265E}"
 var arrayABC = ["A","B","C","D","E","F","G","H"]
 var arrayNumber = [1,2,3,4,5,6,7,8]
 var indexArray = 0
+var indexArrayABC = 0
 for x in 1...9{
     for y in 1...9{
         if x==1&&y>1{
-            print(arrayNumber[indexArray], terminator: " ")
+            print(arrayNumber[indexArray], terminator: " ")// печать горизонтальных значений доски
             indexArray+=1
         }else if x==1&&y==1{
-            print(" ",terminator: "")
+            print(" ",terminator: " ")
             continue
-        }
-        if x>1&&y==1{
-            print(arrayABC[indexArray])
-            indexArray+=1
+        }else if x>1&&y==1{
+            print(arrayABC[indexArrayABC], terminator: " ")// печать вертикальныйх значений доски
+            indexArrayABC+=1
+        }//else if
+        
+        else if x>1&&y>1{
+            print("_ ", terminator: "")
         }
     }
-    indexArray=0
+    print("\n")
 }
 /*
  Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
