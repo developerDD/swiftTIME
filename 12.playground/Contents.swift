@@ -365,12 +365,11 @@ for key in curs.keys {
 }
 print("Средняя оценка по курсу - \(sumGrade/countGrade)")
  */
-/*
- Задание 8
+/*Задание 8
 
  Основано на предыдущем задании
  Перед вам стоит задача внести в уже существующий словарь оценку за еще одно занятие для студента. Покажите, каким образом это можно сделать.
- */
+ 
 var curs: [String:[String:UInt]] = ["Пупкин":["21.10.21":5,"23.10.21":3,"1.2.12":5],"Пуушкин":["25.10.21":4,"26.10.21":3],"Кукушкин":["10.10.21":5,"27.10.21":5]]
 assert(!curs.isEmpty, "Словарь пустой!")
 var sumStudentGrade: Float = 0
@@ -404,8 +403,40 @@ for key in curs.keys {
     sumStudentGrade=0
 }
 print("Средняя оценка по курсу - \(sumGrade/countGrade)")
-
-/*Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
+ */
+/*Задание 9
+ 
+ 1) Создайте псевдоним Coordinates для типа кортежа (alpha: Character?, num: Int?). Данный тип будет описывать координаты шахматной фигуры на игровом поле. Если вместо элементов кортежа стоит nil, значит фигура не находится на игровом поле.
+ 2) Создайте псевдоним Chessman для типа словаря [String:Coordinates]. Данный тип описывает шахматную фигуру на игровом поле. В ключе словаря должно хранится имя фигуры, например "White King", а в значении – кортеж, указывающий на координаты фигуры на игровом поле.
+ 3) Создайте переменный словарь figures типа Chessman и добавьте в него три произвольные фигуры, одна из которых не должна иметь координат.
+ 4) Создайте цикл, которая обходит всех элементы словаря (все фигуры), и проверяет, убита ли очередная фигура (элемент словаря figures), далее выводит на консоль информацию либо о координатах фигуры, либо о ее отсутствии на игровом поле.
+ 
+ */
+typealias Cooredinates = (alpha: Character?, num: Int?)
+typealias Chessman = [String:Cooredinates]
+var arrWhiteChess: Set = ["\u{2654}","\u{2655}","\u{2656}","\u{2657}","\u{2658}","\u{2659}"]
+var arrBlackChess: Set = ["\u{265A}","\u{265B}","\u{265C}","\u{265D}","\u{265E}","\u{265F}"]
+var arrayABC = ["A","B","C","D","E","F","G","H"]
+var arrayNumber = [1,2,3,4,5,6,7,8]
+var indexArray = 0
+for x in 1...9{
+    for y in 1...9{
+        if x==1&&y>1{
+            print(arrayNumber[indexArray], terminator: " ")
+            indexArray+=1
+        }else if x==1&&y==1{
+            print(" ",terminator: "")
+            continue
+        }
+        if x>1&&y==1{
+            print(arrayABC[indexArray])
+            indexArray+=1
+        }
+    }
+    indexArray=0
+}
+/*
+ Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
 func triangular(_ n: Int) -> Int{
 var coutn = 0
@@ -713,17 +744,5 @@ func findDifference(_ a: [Int], _ b: [Int]) -> Int {
 }
  */
 
-var easy: String?
-var medium: String!
-var hard: String
-
-easy = "1"
-medium = "koko"
-hard = "paly"
-easy = medium
-hard = medium
-easy = hard
-var gameT = (easy, Optional(hard))
-var ha: String = gameT.0!
 
 
