@@ -414,12 +414,20 @@ print("Средняя оценка по курсу - \(sumGrade/countGrade)")
  */
 typealias Cooredinates = (alpha: Character?, num: Int?)
 typealias Chessman = [String:Cooredinates]
-var arrWhiteChess: Set = ["\u{2654}","\u{2655}","\u{2656}","\u{2657}","\u{2658}","\u{2659}"]
-var arrBlackChess: Set = ["\u{265A}","\u{265B}","\u{265C}","\u{265D}","\u{265E}","\u{265F}"]
+var arrWhiteChess = ["\u{2656}","\u{2658}", "\u{2657}","\u{2655}","\u{2654}","\u{2657}","\u{2658}","\u{2656}","\u{2659}"
+                     ,"\u{2659}","\u{2659}","\u{2659}","\u{2659}","\u{2659}","\u{2659}","\u{2659}"]
+var arrBlackChess = ["\u{265F}","\u{265F}","\u{265F}","\u{265F}","\u{265F}","\u{265F}","\u{265F}","\u{265F}",
+                     "\u{265C}","\u{265E}","\u{265D}","\u{265B}","\u{265A}","\u{265E}","\u{265D}","\u{265C}"]
+
+func showBord(){
+    
+}
 var arrayABC = ["A","B","C","D","E","F","G","H"]
 var arrayNumber = [1,2,3,4,5,6,7,8]
 var indexArray = 0
 var indexArrayABC = 0
+var indexWhiteChess = 0
+var indexBlackChess = 0
 for x in 1...9{
     for y in 1...9{
         if x==1&&y>1{
@@ -431,9 +439,13 @@ for x in 1...9{
         }else if x>1&&y==1{
             print(arrayABC[indexArrayABC], terminator: " ")// печать вертикальныйх значений доски
             indexArrayABC+=1
-        }//else if
-        
-        else if x>1&&y>1{
+        }else if (x==2 && y > 1) || (x==3 && y > 1) {
+            print("\(arrWhiteChess[indexWhiteChess]) ", terminator: "")
+            indexWhiteChess+=1
+        }else if (x==8 && y > 1) || (x==9 && y > 1) {
+            print("\(arrBlackChess[indexBlackChess]) ", terminator: "")
+            indexBlackChess+=1
+        }else if (x>3&&y>1) && (x<8&&y>1) {
             print("_ ", terminator: "")
         }
     }
