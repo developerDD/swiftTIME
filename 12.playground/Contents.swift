@@ -414,25 +414,32 @@ print("Средняя оценка по курсу - \(sumGrade/countGrade)")
  */
 typealias Cooredinates = (alpha: Character?, num: Int?)
 typealias Chessman = [String:Cooredinates]
+var figures: Chessman = ["конь":("В",3), "пешка": ("А",3), "Король":(nil,nil)]
+for figura in figures {
+    print(figura.key)
+    if let aBC = figura.value.alpha, let numberBord = figura.value.num {
+        print("Кординаты фигуры на поле - \(aBC) \(numberBord)")
+    }else{
+        print("Фигура убита(")
+    }
+}
+//Шахматная доска с фигурами
+/*
 var arrWhiteChess = ["\u{2656}","\u{2658}", "\u{2657}","\u{2655}","\u{2654}","\u{2657}","\u{2658}","\u{2656}","\u{2659}"
                      ,"\u{2659}","\u{2659}","\u{2659}","\u{2659}","\u{2659}","\u{2659}","\u{2659}"]
 var arrBlackChess = ["\u{265F}","\u{265F}","\u{265F}","\u{265F}","\u{265F}","\u{265F}","\u{265F}","\u{265F}",
                      "\u{265C}","\u{265E}","\u{265D}","\u{265B}","\u{265A}","\u{265E}","\u{265D}","\u{265C}"]
 
-func showBord(){
-    
-}
 var arrayABC = ["A","B","C","D","E","F","G","H"]
-var arrayNumber = [1,2,3,4,5,6,7,8]
-var indexArray = 0
+
+
 var indexArrayABC = 0
 var indexWhiteChess = 0
 var indexBlackChess = 0
 for x in 1...9{
     for y in 1...9{
         if x==1&&y>1{
-            print(arrayNumber[indexArray], terminator: " ")// печать горизонтальных значений доски
-            indexArray+=1
+            print(y-1, terminator: " ")// печать горизонтальных значений доски
         }else if x==1&&y==1{
             print(" ",terminator: " ")
             continue
@@ -451,6 +458,7 @@ for x in 1...9{
     }
     print("\n")
 }
+ */
 /*
  Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
