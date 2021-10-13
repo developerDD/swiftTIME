@@ -464,9 +464,34 @@ for x in 1...9{
 //Глава 12 Функции
 
 /* Задание 4 Используя перегрузку (overloading) создайте две одноименные функции, которые могут принимать два однотипных параметра (Int или Double) и возвращают их произведение
+ func multi (a:Int,b:Int)-> Int{a*b}
+ func multi (a:Double,b:Double)-> Double{a*b}
  */
-func multi (a:Int,b:Int)-> Int{a*b}
-func multi (a:Double,b:Double)-> Double{a*b}
+
+
+/*Задание 6
+ 
+ Напишите функцию, которая производит подсчет стоимости аренды квартиры с учетом следующих условий:
+ 1. Один день аренды стоит 850 рублей
+ 2. При аренде от 3 дней вы получаете скидку в размере 550 рублей от общей суммы
+ 3. При аренде от 7 дней вы получаете скидку в размере 1620 рублей от общей суммы
+ Функция должна принимать на вход количество дней, а возвращать итоговую сумму.
+ Пример
+ funcName(5) -> 3700
+ funcName(9) -> 6030
+ func payForRent (days:Int)-> Int{
+     
+     switch days {
+     case 3...7:
+         return (days*850)-550
+     case 1..<3:
+         return days*850
+     default:
+         return (days*850)-1620
+     }
+ }
+ print(payForRent(days: 9))  
+ */
 
 /*
  Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
