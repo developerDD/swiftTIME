@@ -460,6 +460,14 @@ for x in 1...9{
     print("\n")
 }
  */
+
+//Глава 12 Функции
+
+/* Задание 4 Используя перегрузку (overloading) создайте две одноименные функции, которые могут принимать два однотипных параметра (Int или Double) и возвращают их произведение
+ */
+func multi (a:Int,b:Int)-> Int{a*b}
+func multi (a:Double,b:Double)-> Double{a*b}
+
 /*
  Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
@@ -796,11 +804,9 @@ func grow(_ arr: [Int]) -> Int {
  */
 
 /* создать функцию, которая возьмет плавающий и вернет сумму в долларах и центах в строке 39,99 становится $39,99
- 
- 
- 
- */
-func formatMoney(_ val:Double) -> String {
-    "$\(String(format: "%.2f",val))"
-}
+ func formatMoney(_ val:Double) -> String {
+     "$\(String(format: "%.2f",val))"
+ }
+*/
+
 
