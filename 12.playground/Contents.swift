@@ -547,8 +547,6 @@ return Set(text).count == text.count
  */
 
 /*Задание 11 Напишите функцию, которая определяет, состоят ли две переданные в нее строки из одних и тех же символов
-   
- */
 func symbolsIsEqualInStr (str1: String, str2: String)-> Bool{
 
     var strCheck = str1
@@ -561,6 +559,29 @@ func symbolsIsEqualInStr (str1: String, str2: String)-> Bool{
     }
     return strCheck.count==0
 }
+ */
+
+/*Задание 12 Напишите функцию, которая принимает на вход целочисленный диапазон и возвращает из него все простые числа.
+ 
+ 
+ */
+func getSimpleNumbers(from range: ClosedRange<Int>) -> [Int] {
+    var arr = [Int]()
+    for numberRange in range {
+        if numberRange<3 {
+            continue
+        }
+        for delitel in 2...numberRange {
+            if numberRange%delitel == 0 && numberRange == delitel{
+                arr.append(numberRange)
+            }else if numberRange%delitel == 0 && numberRange != delitel{
+                break
+        }
+    }
+  }
+    return arr
+}
+    getSimpleNumbers(from: 0...30)
 /*
  Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
