@@ -506,17 +506,14 @@ func repeatStr (str: String, repeatNum: Int)-> String{
 print("\(repeatStr(str: "Dima", repeatNum: 0))")
  */
 
-/*Задание 9
- 
-
+/*Задание 9 Реализуйте функцию, которая высчитывает, сколько раз мяч пролетит мимо мамы (вниз и вверх)
  Мальчик находится на N-ом этаже в здании. Мама мальчика смотрит в окно на M-ом этаже здания. Мальчик выпускает из рук мячик, он летит вниз, отскакивает на (высота броска) * L, вновь летит вниз, вновь отскакивает на (высота предыдущего отскока) * L и т.д, пока не окончит отскакивать.
- Реализуйте функцию, которая высчитывает, сколько раз мяч пролетит мимо мамы (вниз и вверх). Функция должна принимать на вход следующие параметры:
+Функция должна принимать на вход следующие параметры:
  – высота одного этажа (h > 0)
  – этаж мальчика (N >= 2)
  – этаж мамы (M >= 1)
  – коэффициент отскока (L < 1)
- */
-
+ 
 func countJumpBol (heigthFloor: Float, floorBoy: Float, floorMam: Float, rateJump: Float)->Int{
     var countJump = 0
     var jump: Float = floorBoy*rateJump
@@ -525,6 +522,30 @@ func countJumpBol (heigthFloor: Float, floorBoy: Float, floorMam: Float, rateJum
         countJump+=2
     }while (jump>=floorMam)
     return countJump
+}
+ */
+
+/* Задание 10Напишите функцию, которая принимает параметр типа String, а возвращает true (типа Bool) если в строке есть только уникальные символы , и false, если в ней есть хотя бы один повторяющийся символ.
+
+
+ */
+func isUniqueString (str:String)->Bool{
+    var sds: String
+    var str1 = str
+    while str1.count>1 {
+        sds = String( str1.removeFirst())
+        for s in str1{
+            if sds == String(s){
+                return false
+            }
+        }
+    }
+    return true
+}
+print(isUniqueString(str: "Unique Symbols"))
+// или
+func checkUniqueSymbols2(text: String) -> Bool {
+return Set(text).count == text.count
 }
 /*
  Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
