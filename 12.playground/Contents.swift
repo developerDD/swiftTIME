@@ -526,9 +526,6 @@ func countJumpBol (heigthFloor: Float, floorBoy: Float, floorMam: Float, rateJum
  */
 
 /* Задание 10Напишите функцию, которая принимает параметр типа String, а возвращает true (типа Bool) если в строке есть только уникальные символы , и false, если в ней есть хотя бы один повторяющийся символ.
-
-
- */
 func isUniqueString (str:String)->Bool{
     var sds: String
     var str1 = str
@@ -546,6 +543,23 @@ print(isUniqueString(str: "Unique Symbols"))
 // или
 func checkUniqueSymbols2(text: String) -> Bool {
 return Set(text).count == text.count
+}
+ */
+
+/*Задание 11 Напишите функцию, которая определяет, состоят ли две переданные в нее строки из одних и тех же символов
+   
+ */
+func symbolsIsEqualInStr (str1: String, str2: String)-> Bool{
+
+    var strCheck = str1
+    for s in str2 {
+        if let firstIndex = strCheck.firstIndex(of: s){
+            strCheck.remove(at: firstIndex)
+        }else   {
+            return false
+        }
+    }
+    return strCheck.count==0
 }
 /*
  Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
