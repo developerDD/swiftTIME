@@ -497,13 +497,35 @@ for x in 1...9{
  Пример:
  funcName("Swift", 2) -> "SwiftSwift"
  funcName("Xcode", 0) -> ""
- */
+ 
 func repeatStr (str: String, repeatNum: Int)-> String{
     String(repeating: str, count: repeatNum) // сразу строкой
     //Array(repeating: str, count: repeatNum).joined(separator: "")// массивом
     
 }
 print("\(repeatStr(str: "Dima", repeatNum: 0))")
+ */
+
+/*Задание 9
+ 
+
+ Мальчик находится на N-ом этаже в здании. Мама мальчика смотрит в окно на M-ом этаже здания. Мальчик выпускает из рук мячик, он летит вниз, отскакивает на (высота броска) * L, вновь летит вниз, вновь отскакивает на (высота предыдущего отскока) * L и т.д, пока не окончит отскакивать.
+ Реализуйте функцию, которая высчитывает, сколько раз мяч пролетит мимо мамы (вниз и вверх). Функция должна принимать на вход следующие параметры:
+ – высота одного этажа (h > 0)
+ – этаж мальчика (N >= 2)
+ – этаж мамы (M >= 1)
+ – коэффициент отскока (L < 1)
+ */
+
+func countJumpBol (heigthFloor: Float, floorBoy: Float, floorMam: Float, rateJump: Float)->Int{
+    var countJump = 0
+    var jump: Float = floorBoy*rateJump
+    repeat {
+        jump*=rateJump
+        countJump+=2
+    }while (jump>=floorMam)
+    return countJump
+}
 /*
  Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
