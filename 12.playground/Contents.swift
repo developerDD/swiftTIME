@@ -468,7 +468,6 @@ for x in 1...9{
  func multi (a:Double,b:Double)-> Double{a*b}
  */
 
-
 /*Задание 6
  
  Напишите функцию, которая производит подсчет стоимости аренды квартиры с учетом следующих условий:
@@ -493,6 +492,18 @@ for x in 1...9{
  print(payForRent(days: 9))  
  */
 
+/*Задание 8 Напишите функцию, которая повторяет заданную строку N раз.
+ Функция принимает на вход значение типа String (строку для повторений) и значение типа Int (количество повторений) и возвращает полученный результат.
+ Пример:
+ funcName("Swift", 2) -> "SwiftSwift"
+ funcName("Xcode", 0) -> ""
+ */
+func repeatStr (str: String, repeatNum: Int)-> String{
+    String(repeating: str, count: repeatNum) // сразу строкой
+    //Array(repeating: str, count: repeatNum).joined(separator: "")// массивом
+    
+}
+print("\(repeatStr(str: "Dima", repeatNum: 0))")
 /*
  Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
