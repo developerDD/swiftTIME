@@ -922,26 +922,22 @@ func multi (num: Int)-> Int{
     return 0
 }
  */
-
 /*Если задан непустой массив целых чисел, возвращаем результат умножения значений вместе в порядке. Пример: [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 func grow(_ arr: [Int]) -> Int {
   return arr.reduce(1,*)
 }
  */
-
 /* создать функцию, которая возьмет плавающий и вернет сумму в долларах и центах в строке 39,99 становится $39,99
  func formatMoney(_ val:Double) -> String {
      "$\(String(format: "%.2f",val))"
  }
 */
-
 /* написать функцию, которая возвращает время с полуночи в миллисекундах.
- 
- */
 func past(_ h: Int, _ m: Int, _ s: Int) -> Int {
     // your code here
     (h*(60*60000))+(m*60000)+(s*1000)
 }
+ */
 /*про овечек и волка
 func warnTheSheep(_ queue: [String]) -> String {
     if queue.count == queue.firstIndex(of: "wolf")!+1{
@@ -951,4 +947,21 @@ func warnTheSheep(_ queue: [String]) -> String {
     }
 }
 */
+/*Входное число выход строка 9-> "Девять"
+func switchItUp(_ number: Int) -> String {
+    switch number{
+  case 1: return "One"
+case 2: return "Two"
+case 3: return "Three"
+    case 4: return "Four"
+    case 5: return "Five"
+    case 6: return "Six"
+    case 7: return "Seven"
+    case 8: return "Eigth"
+    default:
+    return "Nine"
+        //        return ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][number]
+}
+}
+ */
 
