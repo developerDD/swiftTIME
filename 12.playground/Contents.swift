@@ -562,9 +562,7 @@ func symbolsIsEqualInStr (str1: String, str2: String)-> Bool{
  */
 
 /*Задание 12 Напишите функцию, которая принимает на вход целочисленный диапазон и возвращает из него все простые числа.
- 
- 
- */
+
 func getSimpleNumbers(from range: ClosedRange<Int>) -> [Int] {
     var arr = [Int]()
     for numberRange in range {
@@ -582,6 +580,21 @@ func getSimpleNumbers(from range: ClosedRange<Int>) -> [Int] {
     return arr
 }
     getSimpleNumbers(from: 0...30)
+ */
+
+/*Задание 13 Реализуйте функцию pow(Int,Int),
+  которая принимает два целочисленных элемента. Первый указывает на степень второго числа. Результат функции – второй аргумент функции, возведенный в степень (первый аргумент функции).
+ Предполагается, что аргументы могут быть только целыми положительными числами
+ 
+ */
+func powInt (degree:Int, number:Int) -> Int{
+    var result = number
+    for _ in 1..<degree{
+       result*=number
+    }
+    return result
+}
+print(powInt(degree: 8, number: 4))
 /*
  Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
