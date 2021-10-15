@@ -942,4 +942,13 @@ func past(_ h: Int, _ m: Int, _ s: Int) -> Int {
     // your code here
     (h*(60*60000))+(m*60000)+(s*1000)
 }
-print(past(1, 0, 1))
+/*про овечек и волка
+func warnTheSheep(_ queue: [String]) -> String {
+    if queue.count == queue.firstIndex(of: "wolf")!+1{
+        return "Pls go away and stop eating my sheep"
+    } else {
+        return "Oi! Sheep number \(queue.count - (queue.firstIndex(of: "wolf")!+1))! You are about to be eaten by a wolf!"
+    }
+}
+*/
+
