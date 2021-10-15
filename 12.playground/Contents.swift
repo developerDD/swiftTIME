@@ -585,8 +585,6 @@ func getSimpleNumbers(from range: ClosedRange<Int>) -> [Int] {
 /*Задание 13 Реализуйте функцию pow(Int,Int),
   которая принимает два целочисленных элемента. Первый указывает на степень второго числа. Результат функции – второй аргумент функции, возведенный в степень (первый аргумент функции).
  Предполагается, что аргументы могут быть только целыми положительными числами
- 
- */
 func powInt (degree:Int, number:Int) -> Int{
     var result = number
     for _ in 1..<degree{
@@ -595,6 +593,7 @@ func powInt (degree:Int, number:Int) -> Int{
     return result
 }
 print(powInt(degree: 8, number: 4))
+ */
 /*
  Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.
  
@@ -936,4 +935,11 @@ func grow(_ arr: [Int]) -> Int {
  }
 */
 
-
+/* написать функцию, которая возвращает время с полуночи в миллисекундах.
+ 
+ */
+func past(_ h: Int, _ m: Int, _ s: Int) -> Int {
+    // your code here
+    (h*(60*60000))+(m*60000)+(s*1000)
+}
+print(past(1, 0, 1))
