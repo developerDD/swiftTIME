@@ -970,18 +970,14 @@ func isDivisible(_ n: Int, _ x: Int, _ y: Int) -> Bool {
     return true
 }
 */
-/*
- Получить сумму цифр числа и отнять сумму от числа РЕКУРСИВНО
- */
-
-
-
+/*Получить сумму цифр числа и отнять сумму от числа РЕКУРСИВНО
 func sumNumber (number: Int)->Int{
     if number < 10{
         return number
     }
-    
     return sumNumber(number: number - String(number).compactMap{Int(String($0))}.reduce(0, +))
 }
+ */
+
 
 
