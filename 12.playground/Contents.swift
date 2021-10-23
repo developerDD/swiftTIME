@@ -669,6 +669,16 @@ func quarter(of month: Int) -> Int {
 //}
 //return arr.reduce(0) { $0 + (Int("\($1)") ?? 0) }
  */
+// Глава 13 Замыкания
+/*Задание 1 1)Напишите замыкание, которое производит вывод на консоль сообщения "Hello, World!".
+ 2)Вызовите данное замыкание
+ 3)Какой тип данных у данного замыкания?
+ 
+ */
+let showHello = {
+    print("Hello, World!")
+}
+showHello()
 
 //Array chapter
 /*
