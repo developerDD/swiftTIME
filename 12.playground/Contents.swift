@@ -689,12 +689,14 @@ func quarter(of month: Int) -> Int {
 /*Задание 4 Напишите замыкание, которое принимает на вход два целочисленных параметра и возвращает их сумму.
  2) Протестируйте работу данного замыкания
  3) Какой тип данных будет у данного замыкания?
- 
+ let sumNumber = { (num1: Int, num2: Int)->Int in
+     return num1+num2
+ }
+ версия сокрашенная
+ let sumNum: (Int,Int)->Int = {$0+$1}
+ sumNumber(2,2)
  */
-let sumNumber = { (num1: Int, num2: Int)->Int in
-    return num1+num2
-}
-sumNumber(2,2)
+
 //Array chapter
 /*
  Задание 4
