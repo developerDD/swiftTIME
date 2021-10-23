@@ -673,12 +673,19 @@ func quarter(of month: Int) -> Int {
 /*Задание 1 1)Напишите замыкание, которое производит вывод на консоль сообщения "Hello, World!".
  2)Вызовите данное замыкание
  3)Какой тип данных у данного замыкания?
- 
+ let showHello = {
+     print("Hello, World!")
+ }
+ showHello()
  */
-let showHello = {
-    print("Hello, World!")
-}
-showHello()
+/*Задание 3 Напишите замыкание, которое принимает на вход параметр типа String и выводит его значение на консоль.
+ 2) Вызовите данное замыкание
+ 3) Какой тип данных у данного замыкания?
+ let showStr = { (stroka:String)->String in
+     return stroka
+ }
+ showStr("Dima")
+ */
 
 //Array chapter
 /*
