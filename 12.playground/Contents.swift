@@ -700,12 +700,25 @@ func quarter(of month: Int) -> Int {
  2) Напишите функцию, которая принимает на вход два целочисленных параметра, а так же замыкание типа (Int, Int) -> Int. Данное замыкание (третий аргумент функции) должно определять операцию, которая будет производиться в теле функции.
  3) Вызовите данную функцию и передайте ей два целых числа, а так же написанное в шаге 1 замыкание.
  4) Вызовите данную функцию и передайте ей два целых числа, а так же замыкание, производящее умножение данных чисел. Причем замыкание должно передаваться не через промежуточный параметр-хранилище, а непосредственно в качестве аргумента
- 
+ let razNum: (Int,Int)->Int = {$0-$1}
+ func foo (_ num1:Int,_ num2:Int,_ closer:(Int,Int)->Int)->Int{closer(num1,num2)}
+ foo(23, 3, razNum)
+ foo(2, 4, +)
  */
-let razNum: (Int,Int)->Int = {$0-$1}
-func foo (_ num1:Int,_ num2:Int,_ closer:(Int,Int)->Int)->Int{closer(num1,num2)}
-foo(23, 3, razNum)
-foo(2, 4, +)
+/*Выбрать значение в массиве Int по заданому параментру (числа больше или меньше или равно)
+ func filterEd(arr: [Int], closure: (Int)->Bool)->[Int]{
+     var resultArr = [Int]()
+     for arranged in arr {
+         if closure(arranged){
+             resultArr.append(arranged)
+         }
+     }
+     return  resultArr
+ }
+ let arrrr =
+ filterEd(arr: [10,21,32,13,33], closure: {$0==33})
+ */
+
 //Array chapter
 /*
  Задание 4
