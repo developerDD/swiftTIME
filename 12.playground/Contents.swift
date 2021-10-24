@@ -743,17 +743,22 @@ func quarter(of month: Int) -> Int {
  
  */
 
-func findMinMaxAbc (arr:[Character],closure: (UInt8?,UInt8?)->Bool)->Character{
-    var resCharacter:Character = arr[0]
+func findMinMaxAbc (arr:[Character],closure: (UInt8?,UInt8?)->Bool)->Character?{
+    var resCharacter:Character?
+    if !arr.isEmpty {
+        resCharacter = arr[0]
+    }
     for element in arr{
-        if closure(element.asciiValue, resCharacter.asciiValue){
+        if closure(element.asciiValue, resCharacter?.asciiValue){
             resCharacter = element
         }
     }
     return resCharacter
 }
+var arrr = [Character]()
+print(arrr.count)
 var d =
-findMinMaxAbc(arr: ["A","a","z","Z"]){$0! > $1!}
+findMinMaxAbc(arr: arrr){$0! > $1!}
 
 //Array chapter
 /*
