@@ -718,26 +718,43 @@ func quarter(of month: Int) -> Int {
  let arrrr =
  filterEd(arr: [10,21,32,13,33], closure: {$0==33})
  */
-/* Напишите функцию, которая принимает массив интов и клоужер и возвращает инт. Клоужер должен принимать 2 инта (один опшинал) и возвращать да или нет. В самой функции создайте опшинал переменную. Вы должны пройтись в цикле по массиву интов и сравнивать элементы с переменной используя клоужер. Если клоужер возвращает да, то вы записываете значение массива в переменную. в конце функции возвращайте переменную.
+/* Задание 3 Алекс Напишите функцию, которая принимает массив интов и клоужер и возвращает инт. Клоужер должен принимать 2 инта (один опшинал) и возвращать да или нет. В самой функции создайте опшинал переменную. Вы должны пройтись в цикле по массиву интов и сравнивать элементы с переменной используя клоужер. Если клоужер возвращает да, то вы записываете значение массива в переменную. в конце функции возвращайте переменную.
+ 
+ func filterEd(arr:[Int],closure: (Int?,Int)->Bool)->Int{
+     var result: Int?
+     for number in arr {
+         if closure(result,number){
+             result = number
+         }
+     }
+     return result ?? 0
+ }
+ var ferstElementArray =
+ filterEd(arr: [1,3,1,4,5]){$0 == nil || $0! == $1 }
+
+ var maxElementArray =
+ filterEd(arr: [1,3,43,7]){$0 == nil || $0! < $1}
+
+ var minElementArray =
+ filterEd(arr: [1,3,43,7]){$0 == nil || $0! > $1}
+ */
+/*Проделайте задание №3 но для нахождения минимальной и максимальной буквы из массива букв (соответственно скалярному значению)
+
  
  */
-func filterEd(arr:[Int],closure: (Int?,Int)->Bool)->Int{
-    var result: Int?
-    for number in arr {
-        if closure(result,number){
-            result = number
+
+func findMinMaxAbc (arr:[Character],closure: (UInt8?,UInt8?)->Bool)->Character{
+    var resCharacter:Character = arr[0]
+    for element in arr{
+        if closure(element.asciiValue, resCharacter.asciiValue){
+            resCharacter = element
         }
     }
-    return result ?? 0
+    return resCharacter
 }
-var ferstElementArray =
-filterEd(arr: [1,3,1,4,5]){$0 == nil || $0! == $1 }
+var d =
+findMinMaxAbc(arr: ["A","a","z","Z"]){$0! > $1!}
 
-var maxElementArray =
-filterEd(arr: [1,3,43,7]){$0 == nil || $0! < $1}
-
-var minElementArray =
-filterEd(arr: [1,3,43,7]){$0 == nil || $0! > $1}
 //Array chapter
 /*
  Задание 4
