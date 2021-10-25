@@ -740,25 +740,21 @@ func quarter(of month: Int) -> Int {
  */
 /*Проделайте задание №3 но для нахождения минимальной и максимальной буквы из массива букв (соответственно скалярному значению)
 
- 
+ func findMinMaxAbc (arr:[Character],closure: (UInt8?,UInt8?)->Bool)->Character?{
+     var resCharacter:Character?
+     if !arr.isEmpty {
+         resCharacter = arr[0]
+     }
+     for element in arr{
+         if closure(element.asciiValue, resCharacter?.asciiValue){
+             resCharacter = element
+         }
+     }
+     return resCharacter
+ }
+ var d =
+ findMinMaxAbc(arr: ["A","a","z","Z"]){$0! < $1!}
  */
-
-func findMinMaxAbc (arr:[Character],closure: (UInt8?,UInt8?)->Bool)->Character?{
-    var resCharacter:Character?
-    if !arr.isEmpty {
-        resCharacter = arr[0]
-    }
-    for element in arr{
-        if closure(element.asciiValue, resCharacter?.asciiValue){
-            resCharacter = element
-        }
-    }
-    return resCharacter
-}
-var arrr = [Character]()
-print(arrr.count)
-var d =
-findMinMaxAbc(arr: arrr){$0! > $1!}
 
 //Array chapter
 /*
@@ -1069,4 +1065,28 @@ func sumNumber (number: Int)->Int{
 }
  */
 
+func flattenAndSort<T: Comparable>(_ arr: [[T]]) -> [T] {
+var arrResult: [T] = []
+    var str: String = ""
+for stolb in arr{
+    for stroka in stolb{
+        //arr.append(stroka)
+        
+    }
+  }
+  return arrResult.sorted(by:<)
+}
+// Обычная функция преобразования двумерного массива в одномерный и отсортирваный
+var Given = [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]
 
+func ff (arr: [[Int]])-> [Int]{
+    var arr: [Int] = []
+    for stolb in Given{
+        for stroka in stolb{
+            arr.append(stroka)
+        }
+    }
+  return  arr.sorted(by: <)
+}
+
+ff(arr: Given)
