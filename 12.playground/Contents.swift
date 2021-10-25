@@ -1064,20 +1064,19 @@ func sumNumber (number: Int)->Int{
     return sumNumber(number: number - String(number).compactMap{Int(String($0))}.reduce(0, +))
 }
  */
-
+// C Денериками функция преобразования двумерного массива в одномерный и отсортирваный
 func flattenAndSort<T: Comparable>(_ arr: [[T]]) -> [T] {
 var arrResult: [T] = []
-    var str: String = ""
 for stolb in arr{
     for stroka in stolb{
-        //arr.append(stroka)
+        arrResult.append(stroka)
         
     }
   }
   return arrResult.sorted(by:<)
 }
 // Обычная функция преобразования двумерного массива в одномерный и отсортирваный
-var Given = [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]
+var Given = [[3, 2, 1], [4, 6, 5], [123,43,5], [9, 7, 8]]
 
 func ff (arr: [[Int]])-> [Int]{
     var arr: [Int] = []
@@ -1089,4 +1088,4 @@ func ff (arr: [[Int]])-> [Int]{
   return  arr.sorted(by: <)
 }
 
-ff(arr: Given)
+flattenAndSort(Given)
