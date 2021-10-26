@@ -1077,6 +1077,10 @@ func sumNumber (number: Int)->Int{
    }
    return arrResult.sorted(by:<)
  }
+ // С помощью flatMap
+ let arr = [[1,4],[6,3],[434,34,545],[11,12,3443]]
+ var arrRes =
+ arr.flatMap{$0}.sorted(by: <)
  // Обычная функция преобразования двумерного массива в одномерный и отсортирваный
  var Given = [[3, 2, 1], [4, 6, 5], [123,43,5], [9, 7, 8]]
 
@@ -1092,6 +1096,42 @@ func sumNumber (number: Int)->Int{
 
  flattenAndSort(Given)
  */
-let arr = [[1,4],[6,3],[434,34,545],[11,12,3443]]
-var arrRes =
-arr.flatMap{$0}.sorted(by: <)
+
+/*Сбалансированное число - это число, которое * Сумма всех цифр слева от средней цифры (средних цифр) и сумма всех цифр справа от средней цифры (средних цифр) равны*.
+ 
+ */
+func sumNumbet (num: Int)->Int{
+    // сумма всех цифр числа
+    var sum = 0
+    var number = num
+    while(number>0){
+        sum += number%10
+        number /= 10
+    }
+    return sum
+}
+sumNumbet(num: 123)
+
+func razdelStroki(number: Int)-> String{
+    var s1: String = ""
+    var s2: String = ""
+    let numStr = String(number)
+    if numStr.count <= 2{
+        return "Balanced"
+    }
+    // разделение строки по средине
+    if  numStr.count%2==0 {
+        s1 = String(numStr.prefix((numStr.count/2)-1))
+        s2 = String(numStr.suffix((numStr.count/2)-1))
+    }else{
+        s1 = String(numStr.prefix(numStr.count/2))
+        s2 = String(numStr.suffix(numStr.count/2))
+    }
+    if sumNumbet(num: Int(s1)!) == sumNumbet(num: Int(s2)!){
+        return "Balanced"
+    } else{
+        return "Not Balanced"
+    }
+}
+
+razdelStroki(number: 73)
