@@ -1098,9 +1098,7 @@ func sumNumber (number: Int)->Int{
  */
 
 /*Сбалансированное число - это число, которое * Сумма всех цифр слева от средней цифры (средних цифр) и сумма всех цифр справа от средней цифры (средних цифр) равны*.
- 
- */
-func sumNumbet (num: Int)->Int{
+ func sumNumbet (num: Int)->Int{
     // сумма всех цифр числа
     var sum = 0
     var number = num
@@ -1110,8 +1108,6 @@ func sumNumbet (num: Int)->Int{
     }
     return sum
 }
-sumNumbet(num: 123)
-
 func razdelStroki(number: Int)-> String{
     var s1: String = ""
     var s2: String = ""
@@ -1133,5 +1129,11 @@ func razdelStroki(number: Int)-> String{
         return "Not Balanced"
     }
 }
+ */
+/*Простая, заданная строка слов, возвращает длину кратчайшего слова (слов). Map & closers
+ let str = "bitcoin take over the world maybe who knows perhaps"
+ var ds = 0
+ var arr =
+ str.split(separator: " ").map{ String ($0).count}.min() ?? 0
+ */
 
-razdelStroki(number: 73)
