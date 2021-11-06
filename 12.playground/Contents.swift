@@ -1150,27 +1150,25 @@ func razdelStroki(number: Int)-> String{
  */
 
 /*Число Дизария - это число, которое Сумма его цифр с соответствующими позициями равна самому числу.
- 
+ func disariumNumber(_ number: Int) -> String {
+   //Do Some Magic
+     var i = 0.0
+     var sum = 0
+     var nUmber = number
+     var arrNumber: [Double] = []
+     while nUmber > 0 {
+         arrNumber.append(Double (nUmber%10))
+         nUmber/=10
+     }
+     arrNumber = arrNumber.reversed()
+     
+     for n in arrNumber {
+         i+=1
+         sum += Int(pow(n, i))
+     }
+     return sum == number ? "Disarium !!":"Not !!"
+ }
+
  */
-func disariumNumber(_ number: Int) -> String {
-  //Do Some Magic
-    var i = 0.0
-    var sum = 0
-    var nUmber = number
-    var arrNumber: [Double] = []
-    while nUmber > 0 {
-        arrNumber.append(Double (nUmber%10))
-        nUmber/=10
-    }
-    arrNumber = arrNumber.reversed()
-    
-    for n in arrNumber {
-        i+=1
-        sum += Int(pow(n, i))
-    }
-    return sum == number ? "Disarium !!":"Not !!"
-}
 
-
-disariumNumber(1351)
 
