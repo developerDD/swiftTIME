@@ -1136,4 +1136,21 @@ func razdelStroki(number: Int)-> String{
  var arr =
  str.split(separator: " ").map{ String ($0).count}.min() ?? 0
  */
+/*Ваша задача - написать функцию, которая берет строку и возвращает новую строку с удалением всех гласных.
+ func disemvowel(_ s: String) -> String {
+
+     return String(s.compactMap(){
+         if(!["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"].contains($0)){
+             return $0
+         }else{
+             return nil
+         }
+     } )
+ }
+ */
+
+
+
+disemvowel(s)
+
 
